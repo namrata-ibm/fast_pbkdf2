@@ -86,8 +86,8 @@ jobs:
   test-on-s390x:
     runs-on: ubuntu-22.04
     steps:
-    - uses: actions/checkout@v2
-    - name: Enable build and tests on s390x
+    - uses: actions/checkout@v3
+    - name: Setup emulator
       run: |
         sudo docker run --rm --privileged tonistiigi/binfmt:qemu-v6.2.0
     - name: Run build
